@@ -5,7 +5,7 @@
 This PureScript application demonstrates how the number Pi can be
 approximated by inscribing a polygon in a circle. The more vertices
 the polygon got, the more exact the approximation!
-A running version is available on [http://sleepomeno.github.io/pi/html/index.html](http://sleepomeno.github.io/ip/html/index.html).
+A running version is available on [http://sleepomeno.github.io/pi/html/index.html](http://sleepomeno.github.io/pi/html/index.html).
 
 ## How do I build it?
 
