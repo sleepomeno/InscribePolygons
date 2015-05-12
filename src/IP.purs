@@ -3,6 +3,7 @@ module IP where
 import Debug.Trace
 import Math
 import Data.Foreign
+import Data.Maybe
 import Data.Array (map, (..))
 import qualified Data.Array.Unsafe as ArrayUnsafe
 import Rx.JQuery
@@ -13,7 +14,7 @@ import Global (readInt)
 import Control.Monad.Eff
 import Data.Traversable (sequence)
 import Graphics.Canvas (getCanvasElementById, getContext2D, getCanvasDimensions, clearRect)
-import Graphics.Canvas.Free
+import Graphics.Canvas.Free hiding (clearRect)
 
 toRadian d = 2 * Math.pi / 360 * d
 toCoordinates cosSin' = { x : center.x + radius * cosSin'.c, y : center.y + radius * cosSin'.s }
@@ -45,7 +46,7 @@ foreign import stringify
   \}" :: Foreign -> String
 
 main = do
-	canvas <- getCanvasElementById "canvas"
+	(Just canvas) <- getCanvasElementById "canvas"
 	context <- getContext2D canvas
 	verticesInput <- select "#vertices"
 	polygonArea <- select "#polygonArea"

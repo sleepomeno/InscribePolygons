@@ -19,7 +19,10 @@
     "purescript-control": "0.2.2",
     "purescript-rx": "git@github.com:anttih/purescript-rx.git",
 		"jquery-ui":"*",
-		"purescript-globals":"*"
+		"purescript-globals":"*",
+		"rxjs":"*",
+		"rxjs-jquery":"*"
+
   },
   "resolutions": {
     "purescript-control": "0.2.2",
